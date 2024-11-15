@@ -271,8 +271,8 @@ def main():
 
         if mask_file:
             mask = analyzer.load_mask(mask_file)
-        if mask is not None:
-            st.image(mask, caption="Masque chargé", width=None)
+            if mask is not None:
+                st.image(mask, caption="Masque chargé", use_column_width=True)
 
                 # Source vidéo
         st.subheader("Source Vidéo")
@@ -380,7 +380,7 @@ def main():
             image_placeholder.image(
                 output_frame_rgb,
                 caption="Analyse en direct",
-                use_container_width=True
+                use_column_width=True
             )
             # Mise à jour des statistiques si activées
             if st.session_state.show_stats:
