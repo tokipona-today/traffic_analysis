@@ -271,8 +271,8 @@ def main():
 
         if mask_file:
             mask = analyzer.load_mask(mask_file)
-            if mask is not None:
-                st.image_placeholder.image(output_frame_rgb, caption="Analyse en direct", width=None)
+        if mask is not None:
+            st.image(mask, caption="Masque chargé", width=None)
 
                 # Source vidéo
         st.subheader("Source Vidéo")
